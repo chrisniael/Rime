@@ -1,0 +1,7 @@
+patch:
+  # 添加 lua 脚本的 translator
+  engine/translators/+: 
+    - lua_translator@date_translator
+  engine/processors/+:
+    - lua_processor@toggle_ascii
+  "switches/@0/reset": 1  #表示將 switcher 列表中的第一個元素（即 ascii_mode 開關）的初始值重設爲狀態1（即「英文」）。
