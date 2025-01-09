@@ -1,5 +1,3 @@
--- 两个短横杆代表 lua 的注释行
-
 -- 翻译器：自动转换日期时间
 function date_translator(input, seg)
 	if (input == "date") then
@@ -9,3 +7,4 @@ function date_translator(input, seg)
 end
 
 toggle_ascii = require("toggle_ascii")
+punctuation = require("punctuation")

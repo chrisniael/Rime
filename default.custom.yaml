@@ -26,7 +26,7 @@ patch:
       Control_R: noop
   key_binder:
     bindings:
-      - { accept: "Shift+space", toggle: ascii_mode, when: always }  # 切换中英
+      # - { accept: "Shift+space", toggle: ascii_mode, when: always }  # 切换中英
       - { when: has_menu, accept: bracketleft, send: Page_Up }
       - { when: has_menu, accept: bracketright, send: Page_Down }
       - { when: has_menu, accept: minus, send: Page_Up }
