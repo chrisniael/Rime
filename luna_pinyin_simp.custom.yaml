@@ -1,16 +1,9 @@
 patch:
   engine/translators/+: 
     - lua_translator@date_translator
-  engine/processors:
-    - lua_processor@punctuation  # 数字后面标点全部使用全角
-    # - ascii_composer  # 不使用英文输入法可以关掉
-    - recognizer
-    - key_binder
-    - speller
-    - punctuator
-    - selector
-    - navigator
-    - express_editor
+  'engine/processors/@before 0':
+    lua_processor@punctuation  # 数字后面标点全部使用全角
+  # engine/processors/+:
     # - lua_processor@toggle_ascii  # 切换中英文时直接上屏英文
   # "switches/@0/reset": 1  #表示將 switcher 列表中的第一個元素（即 ascii_mode 開關）的初始值重設爲狀態1（即「英文」）。
   # rime-emoji 配置
@@ -25,3 +18,33 @@ patch:
     option_name: emoji_suggestion
     tips: none
     inherit_comment: false
+  punctuator/half_shape:
+    "!": "！"
+    "#": "#"
+    "$": "￥"
+    "%": "%"
+    "&": "&"
+    "(": "（"
+    ")": "）"
+    "*": "*"
+    "+": "+"
+    ",": "，"
+    "-": "-"
+    ".": "。"
+    "/": "、"
+    ":": "："
+    ";": "；"
+    "<": "《"
+    "=": "="
+    ">": "》"
+    "?": "？"
+    "@": "@"
+    "[": "【"
+    "\\": "、"
+    "]": "】"
+    "^": "……"
+    "`": "·"
+    "{": "{"
+    "|": "|"
+    "}": "}"
+    "~": "~"
